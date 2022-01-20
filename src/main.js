@@ -1,7 +1,7 @@
-const koa = require('koa')
+const app = require('./app')
 
-const app = new koa()
+const config = require('./app/config')
 
-app.listen(8000, () => {
-  console.log('服务启动成功了')
+app.listen(config.APP_PORT, () => {
+  console.log(`${config.APP_PORT}服务启动成功了`)
 })
